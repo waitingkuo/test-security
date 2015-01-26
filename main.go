@@ -18,7 +18,8 @@ func main() {
       Action: func (c *cli.Context) {
 
         file := c.Args().First()
-        cmd := exec.Command("openssl", "x509", "-in", file, "-text", "-noout")
+        //cmd := exec.Command("openssl", "x509", "-in", file, "-text", "-noout")
+        cmd := exec.Command("openssl", "x509", "-in", file, "-text")
         output, err := cmd.Output()
         if err != nil {
           panic(err)

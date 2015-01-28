@@ -27,6 +27,18 @@ func main() {
       },
     },
     {
+      Name: "mkcrt",
+      Action: func (c *cli.Context) {
+        cmd := exec.Command("openssl", "req", "-new")
+        output, err := cmd.Output()
+        if err != nil {
+          panic(err)
+        }
+
+        fmt.Println(string(output))
+
+      },
+    {
       Name: "chkcrt",
       Action: func (c *cli.Context) {
 

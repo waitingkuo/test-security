@@ -66,6 +66,19 @@ func main() {
       },
     },
     {
+      Name: "mkkey4096",
+      Action: func (c *cli.Context) {
+        cmd := exec.Command("openssl", "genrsa", "4096")
+        output, err := cmd.Output()
+        if err != nil {
+          panic(err)
+        }
+
+        fmt.Println(string(output))
+
+      },
+    },
+    {
       Name: "mkcrt",
       Action: func (c *cli.Context) {
         cmd := exec.Command("openssl", "req", "-new")

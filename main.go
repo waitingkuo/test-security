@@ -27,7 +27,7 @@ func main() {
       },
     },
     {
-      Name: "mkkey",
+      Name: "mkkey2048",
       Action: func (c *cli.Context) {
         cmd := exec.Command("openssl", "genrsa", "2048")
         output, err := cmd.Output()

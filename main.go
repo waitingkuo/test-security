@@ -14,7 +14,7 @@ func main() {
 	app.Usage = "tool-kit for x509"
 	app.Commands = []cli.Command{
 		{
-			Name: "mkkey",
+			Name: "mkkey2048",
 			Action: func(c *cli.Context) {
 				cmd := exec.Command("openssl", "genrsa", "2048")
 				output, err := cmd.Output()

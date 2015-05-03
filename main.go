@@ -16,7 +16,7 @@ func main() {
 		{
 			Name: "mkkey",
 			Action: func(c *cli.Context) {
-				cmd := exec.Command("openssl", "genrsa", "2048")
+				cmd := exec.Command("openssl", "genrsa", "1024")
 				output, err := cmd.Output()
 				if err != nil {
 					panic(err)
